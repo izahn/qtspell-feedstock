@@ -2,7 +2,7 @@
 
 
 mkdir build
-
-cmake -B build -S . ${CMAKE_ARGS} -DISO_CODES_PREFIX=${PREFIX} -DCMAKE_INSTALL_PREFIX=${PREFIX} -G Ninja
+export ISO_CODES_PREFIX=${PREFIX}/share/xml/iso-codes/
+cmake ISO_CODES_PREFIX=${PREFIX}/share/xml/iso-codes/ -B build -S . ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX=${PREFIX} -G Ninja
 cmake --build build
 cmake --install build
