@@ -10,7 +10,7 @@ source:
   sha256: 49a5ab995c3150572c3c48989cd3e506b0c2d64b09d80fb5b30daa7325445635
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
   run_exports:
     - {{ pin_subpackage('qtspell', max_pin='x.x') }}
@@ -31,9 +31,11 @@ requirements:
     - xorg-libxfixes  # [linux]
     - qt
     - enchant
+    - iso-codes
   run:
     - qt
     - enchant
+    - iso-codes
 
 test:
   commands:
